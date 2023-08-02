@@ -34,7 +34,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
   if(pawWidth > 30) {
     pawHeight = pawWidth - pawHeight;
-  } 
+  } // makes the paw width and height propotionate to eachother
 
  /* strokeWeight(1);
  point(150, 110);
@@ -67,6 +67,10 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   fill(252, 215, 220);
   triangle(55, 80, 85, 80, 57, 40); // left ear pink part
   triangle(105, 95, 147, 115, 143, 40); // right ear pink part 
+
+  /* fill(224, 224, 224);
+  strokeWeight(); // face shadow
+  ellipse(99, 99, 103, 103); */ 
   
   fill(240, 240, 240);
   ellipse(100, 100, 100, 100); // the base of the head
@@ -82,6 +86,10 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   fill(139, 213, 252);
   ellipse(80, 90, eyeSize, eyeSize); // left eye
   ellipse(120, 90, eyeSize, eyeSize); // right eye
+
+  fill(86, 195, 252);
+  ellipse(82, 88, eyeshineSize, eyeshineSize); // left eye shine shadow
+  ellipse(122, 88, eyeshineSize, eyeshineSize); // right eye shine shadow
 
   fill(255,255,255);
   ellipse(83, 87, eyeshineSize, eyeshineSize); // left eye shine
@@ -111,10 +119,15 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   line(140, 105, 172, 105);
   line(140, 110, 170, 125);
 
+  fill(224, 224, 224);
+  strokeWeight(0);
+  ellipse(80, 147, pawWidth, pawHeight); // left paw shadow
+  ellipse(120, 147, pawWidth, pawHeight); // right paw shadow
+
   fill(232, 232, 232);
   strokeWeight(0);
-  ellipse(80, 145, pawWidth, pawHeight);
-  ellipse(120, 145, pawWidth, pawHeight);
+  ellipse(80, 145, pawWidth, pawHeight); // left paw
+  ellipse(120, 145, pawWidth, pawHeight); // right paw
 
 
 }
