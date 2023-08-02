@@ -23,11 +23,6 @@ function wallpaper_background() {
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
-<<<<<<< Updated upstream
-  rect(40 ,40, rect_width, rect_height);
-=======
-
-  
 
   if(eyeSize > 20){
     eyeshineSize = eyeSize - eyeshineSize;
@@ -107,5 +102,5 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   line(140, 100, 170, 85); // right side whiskers 
   line(140, 105, 172, 105);
   line(140, 110, 170, 125);
->>>>>>> Stashed changes
+
 }
