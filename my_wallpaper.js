@@ -6,21 +6,24 @@ let rect_height = 20;
   let earWidth = 100; // 55 - 150 | 100 is the norm
   let eyeSize = 20; // 20 is the norm
   let eyeshineSize = 8; // 8 is the norm
-  let mouthPosition = 116; // 115 is the norm || 110 - 120
+  let mouthPosition = 115; // 115 is the norm && 110 - 120
+  let pawWidth = 30; // 30 is the norm && 20 - 30
+  let pawHeight = 15; // 15 is the norm
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(DEVELOP_GLYPH);
-  pWallpaper.resolution(FIT_TO_SCREEN);
+  pWallpaper.resolution(NINE_LANDSCAPE);
   pWallpaper.show_guide(true); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 200;
-  pWallpaper.grid_settings.cell_height = 200;
-  pWallpaper.grid_settings.row_offset  = 50;
+  pWallpaper.grid_settings.cell_width  = 300;
+  pWallpaper.grid_settings.cell_height = 280;
+  pWallpaper.grid_settings.row_offset  = 0;
 }
 
 function wallpaper_background() {
-  background(240, 255, 240); //light honeydew green colour
+  // background(240, 255, 240); //light honeydew green colour
+  background(220, 239, 252);
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
@@ -28,6 +31,10 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   if(eyeSize > 20){
     eyeshineSize = eyeSize - eyeshineSize;
   } // makes eye and eye shine proportionate to eachother 
+
+  if(pawWidth > 30) {
+    pawHeight = pawWidth - pawHeight;
+  } 
 
  /* strokeWeight(1);
  point(150, 110);
@@ -103,5 +110,11 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   line(140, 100, 170, 85); // right side whiskers 
   line(140, 105, 172, 105);
   line(140, 110, 170, 125);
+
+  fill(232, 232, 232);
+  strokeWeight(0);
+  ellipse(80, 145, pawWidth, pawHeight);
+  ellipse(120, 145, pawWidth, pawHeight);
+
 
 }
