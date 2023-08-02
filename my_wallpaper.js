@@ -1,8 +1,9 @@
 //your parameter variables go here!
 let rect_width  = 20;
 let rect_height = 20;
-let earHeight = 30;  // 30 is the norm
-  let earWidth = 55; // 55 - 150
+
+  let earHeight = 30;  // 30 is the norm
+  let earWidth = 100; // 55 - 150 | 100 is the norm
   let eyeSize = 20; // 20 is the norm
   let eyeshineSize = 8; // 8 is the norm
   let mouthPosition = 116; // 115 is the norm || 110 - 120
