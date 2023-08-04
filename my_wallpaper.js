@@ -6,19 +6,19 @@ let rect_height = 20;
   let earWidth = 100; // 55 - 150 | 100 is the norm
   let eyeSize = 20; // 20 is the norm
   let eyeshineSize = 8; // 8 is the norm
-  let mouthPosition = 115; // 115 is the norm && 110 - 120
-  let pawWidth = 30; // 30 is the norm && 20 - 30
+  let mouthPosition = 115; // 115 is the norm && 115 - 125
+  let pawWidth = 30; // 30 is the norm && 20 - 40
   let pawHeight = 15; // 15 is the norm
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(DEVELOP_GLYPH);
+  pWallpaper.output_mode(GRID_WALLPAPER);
   pWallpaper.resolution(NINE_LANDSCAPE);
-  pWallpaper.show_guide(true); //set this to false when you're ready to print
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 300;
-  pWallpaper.grid_settings.cell_height = 280;
-  pWallpaper.grid_settings.row_offset  = 0;
+  pWallpaper.grid_settings.cell_width  = 350;
+  pWallpaper.grid_settings.cell_height = 300;
+  pWallpaper.grid_settings.row_offset  = 130;
 }
 
 function wallpaper_background() {
@@ -29,12 +29,13 @@ function wallpaper_background() {
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
 
   if(eyeSize > 20){
-    eyeshineSize = eyeSize - eyeshineSize;
-  } // makes eye and eye shine proportionate to eachother 
+    eyeshineSize = eyeSize - 15;
+  } // makes eye and eye shine proportionate to eachother (15 in size difference)
+  
 
   if(pawWidth > 30) {
-    pawHeight = pawWidth - pawHeight;
-  } // makes the paw width and height propotionate to eachother
+    pawHeight = pawWidth - 15;
+  } // makes the paw width and height propotionate to eachother (15 in size difference)
 
  /* strokeWeight(1);
  point(150, 110);
@@ -88,8 +89,8 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   ellipse(120, 90, eyeSize, eyeSize); // right eye
 
   fill(86, 195, 252);
-  ellipse(82, 88, eyeshineSize, eyeshineSize); // left eye shine shadow
-  ellipse(122, 88, eyeshineSize, eyeshineSize); // right eye shine shadow
+  ellipse(82, 89, eyeshineSize, eyeshineSize); // left eye shine shadow
+  ellipse(122, 89, eyeshineSize, eyeshineSize); // right eye shine shadow
 
   fill(255,255,255);
   ellipse(83, 87, eyeshineSize, eyeshineSize); // left eye shine
@@ -111,13 +112,13 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
   
   strokeWeight(0.2);
-  line(60, 100, 30, 85); //left side whiskers
-  line(60, 105, 27, 105);
-  line(60, 110, 30,125);
+  line(60, 100, 30, 85); //left side whiskers || 30 is the normal whisker length
+  line(60, 105, 27, 105); // 27 is the normal whisker length
+  line(60, 110, 30, 125); // 30 is the normal whisker length
 
-  line(140, 100, 170, 85); // right side whiskers 
-  line(140, 105, 172, 105);
-  line(140, 110, 170, 125);
+  line(140, 100, 170, 85); // right side whiskers  || 170 is the normal whisker length
+  line(140, 105, 172, 105);  // 172 is the normal whisker length
+  line(140, 110, 170, 125);  // 170 is the normal whisker length
 
   fill(224, 224, 224);
   strokeWeight(0);
